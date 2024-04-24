@@ -23,7 +23,7 @@ for t in taster:
 while True:
     for i, t in enumerate(taster):
         if not t.value:  # Wenn der Taster gedrückt wird
-            relais[i].value = not relais[i].value  # Relais umschalten
+            relais[i].toggle()  # Relais umschalten
             while not t.value:  # Warten bis der Taster losgelassen wird
                 time.sleep(0.01)
     time.sleep(0.01)  # Kurze Pause für die CPU
